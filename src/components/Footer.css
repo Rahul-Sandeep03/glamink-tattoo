@@ -1,0 +1,34 @@
+.icon-link {
+  text-decoration: none; /* ✅ Removes blue underline */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.icon-link i {
+  color: white;
+}
+
+.icon-link.facebook:hover {
+  background-color: #3b5998;
+}
+
+.icon-link.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.icon-link.instagram:hover {
+  background-color: #e1306c;
+}
+
+.icon-link.youtube:hover {
+  background-color: #ff0000;
+}

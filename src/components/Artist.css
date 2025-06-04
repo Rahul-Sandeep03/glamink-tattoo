@@ -1,0 +1,101 @@
+.artist-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.artist-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.artist-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+  position: relative;
+}
+
+.artist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+
+  /* Torn edge mask */
+  -webkit-mask-image: url('../assets/torn-edge-mask.png');
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+
+ 
+  mask-image: url('../assets/torn-edge-mask.png');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+
+  /* Optional shadow for effect */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.artist-info {
+  flex: 1 1 400px;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.07);
+}
+
+.artist-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.subtitle {
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f7c843;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .artist-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .artist-image, .artist-info {
+    max-width: 90%;
+  }
+}

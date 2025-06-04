@@ -1,0 +1,62 @@
+.appointment-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="datetime-local"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0796f0;
+  outline: none;
+}
+
+form .form-check {
+  font-size: 0.9rem;
+}
+
+form .form-check a {
+  color: #0796f0;
+  text-decoration: underline;
+}
+
+form .btn {
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  background: linear-gradient(to right, #222, #444);
+  color: white;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+form .btn:hover {
+  background: linear-gradient(to right, #444, #222);
+}

@@ -1,0 +1,53 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-section .container {
+  z-index: 2;
+  position: relative;
+  max-width: 700px;
+}
+
+.hero-section .btn {
+  font-weight: 600;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 30px;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #ffc107;
+  color: black;
+  border-color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .hero-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+   .hero-section .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
