@@ -6,11 +6,9 @@
 
 @media (max-width: 767.98px) {
   .contact-container {
-    height: 400px; /* adjust based on preference */
+    height: 400px; 
   }
 }
-
-
 .row {
   height: 100%;
 }

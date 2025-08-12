@@ -2,26 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/src/assets/icon.webp" type="image/webp" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
     
     
-    <link
+   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-HlKzMKtgp1ZIrBb5bM0kKp5ZYdXr8cfzZn5TvbtIEAlptgdZFLuH/YYdVXxY8rYZoJKtxhA8LyARZb5/JR9Yag=="
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
 
 
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>GlaminkTatttoStudio</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx">
+    
+  if (location.pathname !== '/glamink-tattoo/' && !location.pathname.includes('.')) {
+    location.replace('/glamink-tattoo/');
+  }
+</script>
+
   </body>
 </html>

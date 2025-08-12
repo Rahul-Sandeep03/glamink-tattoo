@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
-import artistImg from '../assets/artist-photo.jpg';
-import certified from '../assets/cerGla.jpg';
+import artistImg from '../assets/artist-photo.webp';
+import certified from '../assets/cerGla.webp';
 
 const About = () => {
   return (

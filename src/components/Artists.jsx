@@ -1,6 +1,6 @@
 import React from 'react';
 import './Artist.css';
-import artistImg from '../assets/artist1.jpg'; 
+import artistImg from '../assets/artistt.webp';
 
 function Artist() {
   return (
@@ -19,8 +19,12 @@ function Artist() {
               fine line, realism, and geometric tattoos. He blends passion and precision in every piece of art.
             </p>
             <div className="social-icons">
-              <a href="https://www.instagram.com/she_call_me_hemu?igsh=MXM2enBueTZrOHJoaA=="><i className="bi bi-instagram"></i></a>
-              <a href="https://facebook.com"><i className="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/she_call_me_hemu?igsh=MXM2enBueTZrOHJoaA==">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="https://facebook.com">
+                <i className="bi bi-facebook"></i>
+              </a>
             </div>
           </div>
         </div>

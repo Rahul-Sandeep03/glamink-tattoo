@@ -60,3 +60,12 @@ form .btn {
 form .btn:hover {
   background: linear-gradient(to right, #444, #222);
 }
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.flex-grow-1 {
+  flex-grow: 1;
+}

@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Navbar.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const navbarCollapseRef = useRef(null);
 
   const handleNavigation = (sectionId) => {
     if (location.pathname !== '/') {
       navigate('/');
-      setTimeout(() => scrollToSection(sectionId), 100);
+      setTimeout(() => {
+        scrollToSection(sectionId);
+        collapseNavbar();
+      }, 150);
     } else {
       scrollToSection(sectionId);
+      collapseNavbar();
     }
   };
 
@@ -20,6 +25,28 @@ function Navbar() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const collapseNavbar = () => {
+    try {
+      const collapseElement = navbarCollapseRef.current;
+      if (collapseElement && collapseElement.classList.contains('show')) {
+        const bsCollapse = window.bootstrap.Collapse.getInstance(collapseElement);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        } else {
+          new window.bootstrap.Collapse(collapseElement).hide();
+        }
+      }
+    } catch (error) {
+      console.error('Collapse error:', error);
+      // fallback manual
+      const collapseElement = navbarCollapseRef.current;
+      if (collapseElement && collapseElement.classList.contains('show')) {
+        collapseElement.classList.remove('show');
+        collapseElement.style.height = '0px';
+      }
     }
   };
 
@@ -45,7 +72,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="navbarNav" ref={navbarCollapseRef}>
           <ul className="navbar-nav ms-auto">
             {['about', 'services', 'artists', 'contact'].map((section) => (
               <li className="nav-item" key={section}>
@@ -55,7 +82,9 @@ function Navbar() {
               </li>
             ))}
             <li className="nav-item">
-              <a className="nav-link text-uppercase" href="/gallery">Gallery</a>
+              <a className="nav-link text-uppercase" href="/gallery" onClick={collapseNavbar}>
+                Gallery
+              </a>
             </li>
           </ul>
         </div>

@@ -33,19 +33,7 @@
   display: block;
   max-width: 300px;
   margin: 0 auto;
-
-  /* Torn edge mask */
-  -webkit-mask-image: url('../assets/torn-edge-mask.png');
-  -webkit-mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-
- 
-  mask-image: url('../assets/torn-edge-mask.png');
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-
-  /* Optional shadow for effect */
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .artist-info {
@@ -88,14 +76,14 @@
   color: #f7c843;
 }
 
-/* Responsive Fixes */
 @media (max-width: 768px) {
   .artist-card {
     flex-direction: column;
     text-align: center;
   }
 
-  .artist-image, .artist-info {
+  .artist-image,
+  .artist-info {
     max-width: 90%;
   }
 }

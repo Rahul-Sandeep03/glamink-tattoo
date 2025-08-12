@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // ✅ Import Link
 import './Hero.css';
-import heroBg from '../assets/hero-bg.jpg';
+import heroBg from '../assets/hero-bg.webp';
 
 function Hero() {
   return (

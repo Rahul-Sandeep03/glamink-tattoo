@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Service.css';
-import minimalTattoo from '../assets/minimal-tattoo.jpg';
-import allTattoo from '../assets/all-tattoo.jpg';
-import piercing from '../assets/piercing.jpg';
-import bloodArt from '../assets/blood-art.jpg';
+import minimalTattoo from '../assets/minimal-tattoo.webp';
+import allTattoo from '../assets/all-tattoo.webp';
+import piercing from '../assets/piercing.webp';
+import bloodArt from '../assets/blood-art.webp';
 
 const services = [
   {
